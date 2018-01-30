@@ -14,7 +14,7 @@ public class CheckDefaultUserData {
 	private String password;
 	
 	public boolean checkUser(DefaultUser tempUser) {
-		if(tempUser.getUserName().equals(name)&&tempUser.getUserPassword().equals(password)) {
+		if(tempUser.equals(new DefaultUser(name, password))) {
 			return true;
 		}
 		return false;

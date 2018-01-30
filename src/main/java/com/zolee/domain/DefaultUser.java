@@ -1,5 +1,7 @@
 package com.zolee.domain;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
 public class DefaultUser {
 	
 	private String userName;
@@ -27,6 +29,13 @@ public class DefaultUser {
 
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
+	}
+	
+	public boolean equals(DefaultUser defaultUser) {
+		if(userName.equals(defaultUser.getUserName())&&userPassword.equals(defaultUser.getUserPassword())) {
+			return true;
+		}
+		return false;
 	}
 	
 }
