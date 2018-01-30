@@ -1,7 +1,5 @@
 package com.zolee.domain;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-
 public class DefaultUser {
 	
 	private String userName;
